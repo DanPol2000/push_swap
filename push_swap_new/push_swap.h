@@ -6,7 +6,7 @@
 /*   By: chorse <chorse@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 14:00:35 by chorse            #+#    #+#             */
-/*   Updated: 2022/05/28 18:53:33 by chorse           ###   ########.fr       */
+/*   Updated: 2022/06/10 12:19:46 by chorse           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int			mistakes(char **argv, long long tmp, int i);
 void		last_check(t_list **stack_a, t_list **stack_b, int len);
 void		free_all(t_list **stack_a, t_list **stack_b);
 void		ft_sa(t_list **s_a);
-void		ft_create_butterfly(t_list **s_a, t_list **s_b, int fwd, int len);
+void		ft_create_butterfly(t_list **s_a, t_list **s_b, int fwd);
 void		ft_rb(t_list **s_b);
 int			ft_find_stack_position(t_list **s_b, int index, int len);
 void		ft_to_the_top(int index, t_list **s_b, int len);
@@ -60,5 +60,6 @@ void		ft_rra(t_list **s_a);
 void		ft_rr(t_list **s_a, t_list **s_b);
 void		ft_rrr(t_list **s_a, t_list **s_b);
 void		ft_ss(t_list **s_a, t_list **s_b);
+void		ft_sort_four(t_list **s_a, t_list **s_b, int tmp);
 
 #endif

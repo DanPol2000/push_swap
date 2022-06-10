@@ -6,7 +6,7 @@
 /*   By: chorse <chorse@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 17:44:51 by chorse            #+#    #+#             */
-/*   Updated: 2022/05/28 17:46:25 by chorse           ###   ########.fr       */
+/*   Updated: 2022/06/10 12:24:59 by chorse           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_big_sort(t_list **s_a, t_list **s_b)
 	ft_get_id(*s_a);
 	len = ft_lstsize(*s_a);
 	fwd = ft_choose_fwd(len);
-	ft_create_butterfly(s_a, s_b, fwd, len);
+	ft_create_butterfly(s_a, s_b, fwd);
 	len_nd = ft_lstsize(*s_b);
 	while (len_nd > 0)
 	{
@@ -59,12 +59,12 @@ void	ft_to_the_top(int index, t_list **s_b, int len)
 		ft_cast_operation(pos, s_b, ft_rb);
 }
 
-void	ft_create_butterfly(t_list **s_a, t_list **s_b, int fwd, int len)
+void	ft_create_butterfly(t_list **s_a, t_list **s_b, int fwd)
 {
 	int	point;
 
 	point = 0;
-	while (point != len)
+	while (*s_a)
 	{
 		if ((*s_a)->index <= point)
 		{

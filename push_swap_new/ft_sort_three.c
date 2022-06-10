@@ -6,7 +6,7 @@
 /*   By: chorse <chorse@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 14:01:29 by chorse            #+#    #+#             */
-/*   Updated: 2022/02/20 16:16:51 by chorse           ###   ########.fr       */
+/*   Updated: 2022/06/10 12:18:24 by chorse           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,14 @@ void	ft_sa(t_list **s_a)
 {
 	int	tmp;
 
-	tmp = 0;
-	tmp = (*s_a)->num;
-	(*s_a)->num = (*s_a)->next->num;
-	(*s_a)->next->num = tmp;
-	*s_a = (*s_a)->next;
+	if (ft_lstsize(*s_a) > 1)
+	{
+		tmp = 0;
+		tmp = (*s_a)->num;
+		(*s_a)->num = (*s_a)->next->num;
+		(*s_a)->next->num = tmp;
+		*s_a = (*s_a)->next;
+	}
 	write (1, "sa\n", 3);
 }
 

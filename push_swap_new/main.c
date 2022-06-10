@@ -6,7 +6,7 @@
 /*   By: chorse <chorse@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 16:24:01 by chorse            #+#    #+#             */
-/*   Updated: 2022/05/28 17:46:32 by chorse           ###   ########.fr       */
+/*   Updated: 2022/06/07 19:35:45 by chorse           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,10 +67,12 @@ void	last_check(t_list **stack_a, t_list **stack_b, int len)
 			ft_sa(stack_a);
 	}
 	if (len == 3)
+	{
 		ft_sort_three(stack_a);
-	else if (len == 5)
+	}
+	if (len == 5 | len == 4)
 		ft_sort_five(stack_a, stack_b);
-	else
+	if (len > 5)
 		ft_big_sort(stack_a, stack_b);
 }
 
